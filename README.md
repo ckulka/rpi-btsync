@@ -1,6 +1,3 @@
-Short: btsync on Raspberry Pi
-
-
 This repository provides an image for btsync (https://www.getsync.com) on Raspberry Pi.
 Automated builds currently fail since Docker Hub currently doesn't support ARM platforms.
 
