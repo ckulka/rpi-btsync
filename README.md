@@ -1,14 +1,17 @@
-This repository provides a Dockerfile for btsync (https://www.getsync.com) on Raspberry Pi.
+Short: btsync on Raspberry Pi
 
-# Build Docker Image
 
+This repository provides an image for btsync (https://www.getsync.com) on Raspberry Pi.
+Automated builds currently fail since Docker Hub currently doesn't support ARM platforms.
+
+For more details, see https://github.com/ckulka/rpi-btsync
+
+
+### Run
 ```
-# Shell working directory is where this README.md is
-docker build -t ckulka/rpi-btsync .
-docker run --rm -it -p 8888:8888 -p 5555:5555 ckulka/btsync
+docker run --rm -it -p 5555:5555 -p 8888:8888 ckulka/rpi-btsync
 ```
 
-# Volumes
-
-The configuration and storage folders of the default configuration are both inside ```/home/btsync/```.
+### Volumes
+The configuration and storage folders of the default configuration are both inside ```/home/btsync/```. This directory should be part of a regular backup.
 
