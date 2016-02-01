@@ -28,13 +28,13 @@ I backup my persistent data to AWS S3 (https://aws.amazon.com/de/s3).
 
 My docker-compose file: https://github.com/ckulka/rpi-btsync/blob/master/docker-compose.yml
 ```
-# Upload initial data to AWS S3
-# Has to be done only once at the beginning
-docker-compose run --rm backup sh /opt/aws-s3-sync-backup.sh
-
-# Run the service(s)
-docker-compose up
+# Start the container
+docker-compose up btsync
 
 # On a regular basis, perform the backup
 docker-compose run --rm backup sh /opt/aws-s3-sync-backup.sh
+
+# To spawn a new docker container and use your backup from AWS, use the command below.
+# Wait until it's done and then start the container as mentioned above.
+docker-compose up backup
 ```
