@@ -10,6 +10,16 @@ docker run --rm -it -p 5555:5555 -p 8888:8888 ckulka/rpi-btsync
 ```
 You can now access the Web UI via http://your-raspberry-pi:8888
 
+#### Systemd
+I also included a Systemd service file.
+```
+sudo curl -O https://github.com/ckulka/rpi-btsync/blob/master/btsync.service
+# Adjust the location of the docker-compose.yml
+
+sudo systemctl enable btsync.service
+```
+This automatically starts the service after your Raspberry Pi booted.
+
 ### Persistent Data
 The configuration and storage folders of the default configuration are both inside ```/home/btsync/```. This directory should be part of a regular backup.
 
