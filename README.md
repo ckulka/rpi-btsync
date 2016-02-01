@@ -13,7 +13,7 @@ You can now access the Web UI via http://your-raspberry-pi:8888
 #### Systemd
 I also included a Systemd service file.
 ```
-sudo curl -O https://github.com/ckulka/rpi-btsync/blob/master/btsync.service
+sudo curl -O https://raw.githubusercontent.com/ckulka/rpi-btsync/master/btsync.service
 # Adjust the location of the docker-compose.yml
 
 sudo systemctl enable btsync.service
