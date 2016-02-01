@@ -8,3 +8,5 @@ ExecStart=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml up bts
 ExecReload=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml restart btsync
 ExecStop=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml stop btsync
 
+[Install]
+WantedBy=multi-user.target
