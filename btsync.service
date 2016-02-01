@@ -4,6 +4,7 @@ Requires=docker
 After=docker
 
 [Service]
-ExecStart=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml up
-ExecReload=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml restart
-ExecStop=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml stop
+ExecStart=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml up btsync
+ExecReload=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml restart btsync
+ExecStop=/usr/local/bin/docker-compose -f /etc/btsync/docker-compose.yml stop btsync
+
