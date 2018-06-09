@@ -1,3 +1,7 @@
+# Resilio Sync for Raspberry Pi
+
+**DEPRECATED:** This repository has moved to [ckulka/sync-docker](https://github.com/ckulka/sync-docker) and the [ckulka/btsync](https://hub.docker.com/r/ckulka/btsync/) image which now also support ARM devices like Raspberry Pi. Multi-arch support might be available at [resilio/sync](https://hub.docker.com/r/resilio/sync/) once [PR-26](https://github.com/bt-sync/sync-docker/pull/26) is accepted and merged.
+
 This repository provides an image for btsync (https://www.getsync.com) on Raspberry Pi.
 Automated builds currently fail since Docker Hub currently doesn't support ARM platforms.
 
